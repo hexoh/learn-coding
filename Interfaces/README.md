@@ -27,7 +27,7 @@ interface LabelledValue {
 function printLabel(labelledObj: LabelledValue) {
     console.log(labelledObj.label);
 }
-  
-let myObj1 = {size: 10, label: "Size 10 Object"};
+
+let myObj = {size: 10, label: "Size 10 Object"};
 printLabel(myObj);
 ```
