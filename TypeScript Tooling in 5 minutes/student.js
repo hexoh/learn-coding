@@ -1,14 +1,20 @@
 var Student = /** @class */ (function () {
-    function Student(firstName, middleInitial, lastName) {
-        this.firstName = firstName;
-        this.middleInitial = middleInitial;
+    function Student(fiestName, lastName) {
+        this.firstName = fiestName;
         this.lastName = lastName;
-        this.fullName = firstName + " " + middleInitial + " " + lastName;
     }
+    Student.prototype.greeter = function () {
+        return "Hello，您好" + this.firstName + " " + this.lastName;
+    };
+    Student.prototype.test = function (name, age) {
+        return {
+            name: name,
+            age: age
+        };
+    };
     return Student;
 }());
-function greeter(person) {
-    return "Hello, " + person.firstName + " " + person.lastName;
-}
-var user = new Student("Jane", "M.", "User");
-document.body.innerHTML = greeter(user);
+var user = new Student("王", "小明");
+document.body.innerHTML = user.greeter();
+console.log(user.test('小米'));
+console.log(user.test('小米', 18));
