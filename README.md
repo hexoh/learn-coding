@@ -1,1 +1,1 @@
-# typescript-study
+# TypeScript
