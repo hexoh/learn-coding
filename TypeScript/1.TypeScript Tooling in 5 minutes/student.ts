@@ -8,7 +8,7 @@ class Student {
     }
 
     greeter() {
-        return "Hello，您好" + this.firstName + " " + this.lastName;
+        return "Hello, 您好" + this.firstName + " " + this.lastName;
     }
 
     test(name: string, age?: number) {
@@ -19,7 +19,7 @@ class Student {
     }
 }
 
-var user = new Student("王", "小明");
+let user = new Student("王", "小明");
 document.body.innerHTML = user.greeter();
 console.log(user.test('小米'));
 console.log(user.test('小米', 18))
